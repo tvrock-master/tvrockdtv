@@ -1,0 +1,16 @@
+{
+  "srt": {
+    "version": "1.5.4",
+    "url": "https://codeload.github.com/Haivision/srt/zip/refs/tags/v1.5.4",
+    "archive": "srt-1.5.4.zip",
+    "directory": "srt-1.5.4",
+    "sha256": "6b6b3a1cb985657993b2b7d140ce22af3f8694e76a734a6c5dee41d028c1dd18"
+  },
+  "mbedtls": {
+    "version": "3.6.5",
+    "url": "https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.5/mbedtls-3.6.5.tar.bz2",
+    "archive": "mbedtls-3.6.5.tar.bz2",
+    "directory": "mbedtls-3.6.5",
+    "sha256": "4a11f1777bb95bf4ad96721cac945a26e04bf19f57d905f241fe77ebeddf46d8"
+  }
+}

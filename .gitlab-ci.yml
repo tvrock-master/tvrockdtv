@@ -1,0 +1,59 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_TAG && $CI_PIPELINE_SOURCE == "push"'
+    - when: never
+
+stages:
+  - test
+  - build
+
+.windows-rust:
+  # GitLab.com hosted Windows runner. For self-managed runners, change this tag.
+  tags:
+    - saas-windows-medium-amd64
+  variables:
+    RUSTUP_TOOLCHAIN: stable
+    CARGO_TARGET_DIR: '$CI_PROJECT_DIR/target'
+  before_script:
+    - |
+      $ErrorActionPreference = 'Stop'
+      if (-not (Get-Command rustup -ErrorAction SilentlyContinue)) {
+          $installer = Join-Path $env:TEMP 'rustup-init.exe'
+          Invoke-WebRequest -Uri 'https://win.rustup.rs/x86_64' -OutFile $installer
+          & $installer -y --profile minimal --default-toolchain none
+          if ($LASTEXITCODE -ne 0) { throw 'Rustup installation failed.' }
+          $cargoHome = if ($env:CARGO_HOME) { $env:CARGO_HOME } else { Join-Path $env:USERPROFILE '.cargo' }
+          $env:PATH = "$(Join-Path $cargoHome 'bin');$env:PATH"
+      }
+      rustup toolchain install stable --profile minimal --component clippy --component rustfmt --target x86_64-pc-windows-msvc --target i686-pc-windows-msvc
+      if ($LASTEXITCODE -ne 0) { throw 'Rust toolchain setup failed.' }
+
+test:
+  extends: .windows-rust
+  stage: test
+  script:
+    - |
+      cargo fmt --check
+      if ($LASTEXITCODE -ne 0) { throw 'Formatting check failed.' }
+    - |
+      cargo clippy --all-targets --all-features -- -D warnings
+      if ($LASTEXITCODE -ne 0) { throw 'Clippy failed.' }
+    - ./test.ps1 -Architecture x64
+    - ./test.ps1 -Architecture x86
+  artifacts:
+    paths:
+      - Cargo.lock
+
+build:
+  extends: .windows-rust
+  stage: build
+  needs:
+    - job: test
+      artifacts: true
+  script:
+    - ./build-artifact.ps1
+    - ./publish-gitlab-release.ps1
+  artifacts:
+    name: 'TvRockDTV-$CI_COMMIT_TAG'
+    paths:
+      - tvrockdtv/

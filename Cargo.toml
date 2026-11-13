@@ -1,0 +1,37 @@
+[package]
+name = "tvrockdtv"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+description = "TvRockDTV transport stream and ARIB decoder"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1.53", features = ["rt", "net", "time", "sync", "macros"] }
+tokio-tungstenite = { version = "0.30", features = ["native-tls"] }
+futures-util = { version = "0.3", features = ["sink"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+
+[lib]
+crate-type = ["rlib", "staticlib"]
+
+[features]
+test-harness = []
+drcs-collect = []
+caption-tools = []
+
+[[bin]]
+name = "protocol_harness"
+path = "tools/protocol_harness.rs"
+required-features = ["test-harness"]
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[[bin]]
+name = 'caption_probe'
+path = "tools/drcs/caption_probe.rs"
+required-features = ["caption-tools"]

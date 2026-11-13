@@ -1,0 +1,27 @@
+/target/
+/native/.deps/
+/tvrockdtv/
+/dist/
+/backups/
+/Cargo.lock
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.exe
+*.dll
+
+# Local DRCS captures: BMP previews and original JSON are not source assets.
+drcs-unmapped/
+
+# Only hash mapping documentation belongs in this directory.
+/src/drcs/*
+!/src/drcs/README.md
+!/src/drcs/mappings.rs
+
+# Local test logs may contain machine-specific paths.
+/test-*.log
+
+# Python import-tool caches.
+__pycache__/

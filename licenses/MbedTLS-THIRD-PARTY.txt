@@ -1,0 +1,793 @@
+Additional embedded notices: MbedTLS 3.6.5
+Source archive: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.5/mbedtls-3.6.5.tar.bz2
+
+--- library/aes.c ---
+/*
+ *  FIPS-197 compliant AES implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/aesce.c ---
+/*
+ *  Armv8-A Cryptographic Extension support functions for Aarch64
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/aesce.h ---
+/*
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/aesni.c ---
+/*
+ *  AES-NI support functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/aria.c ---
+/*
+ *  ARIA implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/asn1parse.c ---
+/*
+ *  Generic ASN.1 parsing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/asn1write.c ---
+/*
+ * ASN.1 buffer writing functionality
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/base64.c ---
+/*
+ *  RFC 1521 base64 encoding/decoding
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/bignum_core_invasive.h ---
+/**
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/bignum_core.c ---
+/*
+ *  Core bignum functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/bignum_mod_raw.c ---
+/*
+ *  Low-level modular bignum functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/bignum_mod.c ---
+/**
+ *  Modular bignum functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/bignum.c ---
+/*
+ *  Multi-precision integer library
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/camellia.c ---
+/*
+ *  Camellia implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ccm.c ---
+/*
+ *  NIST SP800-38C compliant CCM implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/chacha20.c ---
+/**
+ * \file chacha20.c
+ *
+ * \brief ChaCha20 cipher.
+ *
+ * \author Daniel King <damaki.gh@gmail.com>
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/chachapoly.c ---
+/**
+ * \file chachapoly.c
+ *
+ * \brief ChaCha20-Poly1305 AEAD construction based on RFC 7539.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/cipher_wrap.c ---
+/**
+ * \file cipher_wrap.c
+ *
+ * \brief Generic cipher wrapper for Mbed TLS
+ *
+ * \author Adriaan de Jong <dejong@fox-it.com>
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/cipher.c ---
+/**
+ * \file cipher.c
+ *
+ * \brief Generic cipher wrapper for Mbed TLS
+ *
+ * \author Adriaan de Jong <dejong@fox-it.com>
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/cmac.c ---
+/**
+ * \file cmac.c
+ *
+ * \brief NIST SP800-38B compliant CMAC implementation for AES and 3DES
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/constant_time_impl.h ---
+/**
+ *  Constant-time functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ctr_drbg.c ---
+/*
+ *  CTR_DRBG implementation based on AES-256 (NIST SP 800-90)
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ctr.h ---
+/**
+ * \file ctr.h
+ *
+ * \brief    This file contains common functionality for counter algorithms.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/debug.c ---
+/*
+ *  Debugging routines
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/des.c ---
+/*
+ *  FIPS-46-3 compliant Triple-DES implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/dhm.c ---
+/*
+ *  Diffie-Hellman-Merkle key exchange
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ecdh.c ---
+/*
+ *  Elliptic curve Diffie-Hellman
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ecdsa.c ---
+/*
+ *  Elliptic curve DSA
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ecjpake.c ---
+/*
+ *  Elliptic curve J-PAKE
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ecp_curves_new.c ---
+/*
+ *  Elliptic curves over GF(p): curve-specific data and functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ecp.c ---
+/*
+ *  Elliptic curves over GF(p): generic functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/entropy_poll.c ---
+/*
+ *  Platform-specific and custom entropy polling functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/entropy.c ---
+/*
+ *  Entropy accumulator implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/error.c ---
+/*
+ *  Error message information
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/gcm.c ---
+/*
+ *  NIST SP800-38D compliant GCM implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/hkdf.c ---
+/*
+ *  HKDF implementation -- RFC 5869
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/hmac_drbg.c ---
+/*
+ *  HMAC_DRBG implementation (NIST SP 800-90)
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/lmots.c ---
+/*
+ * The LM-OTS one-time public-key signature scheme
+ *
+ * Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/lms.c ---
+/*
+ *  The LMS stateful-hash public-key signature scheme
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/md_psa.h ---
+/**
+ * Translation between MD and PSA identifiers (algorithms, errors).
+ *
+ *  Note: this internal module will go away when everything becomes based on
+ *  PSA Crypto; it is a helper for the transition period.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/md.c ---
+/**
+ * \file md.c
+ *
+ * \brief Generic message digest wrapper for Mbed TLS
+ *
+ * \author Adriaan de Jong <dejong@fox-it.com>
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/md5.c ---
+/*
+ *  RFC 1321 compliant MD5 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/memory_buffer_alloc.c ---
+/*
+ *  Buffer-based memory allocator
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/mps_reader.c ---
+/*
+ *  Message Processing Stack, Reader implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/mps_trace.c ---
+/*
+ *  Message Processing Stack, Trace module
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/net_sockets.c ---
+/*
+ *  TCP/IP or UDP/IP networking functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/nist_kw.c ---
+/*
+ *  Implementation of NIST SP 800-38F key wrapping, supporting KW and KWP modes
+ *  only
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/oid.c ---
+/**
+ * \file oid.c
+ *
+ * \brief Object Identifier (OID) database
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/padlock.c ---
+/*
+ *  VIA PadLock support functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pem.c ---
+/*
+ *  Privacy Enhanced Mail (PEM) decoding
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pk_ecc.c ---
+/*
+ *  ECC setters for PK.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pk_wrap.c ---
+/*
+ *  Public Key abstraction layer: wrapper functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pk.c ---
+/*
+ *  Public Key abstraction layer
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pkcs12.c ---
+/*
+ *  PKCS#12 Personal Information Exchange Syntax
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pkcs5.c ---
+/**
+ * \file pkcs5.c
+ *
+ * \brief PKCS#5 functions
+ *
+ * \author Mathias Olsson <mathias@kompetensum.com>
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pkparse.c ---
+/*
+ *  Public Key layer for parsing key files and structures
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/pkwrite.c ---
+/*
+ *  Public Key layer for writing key files and structures
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/platform_util.c ---
+/*
+ * Common and shared functions used by multiple modules in the Mbed TLS
+ * library.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/platform.c ---
+/*
+ *  Platform abstraction layer
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/poly1305.c ---
+/**
+ * \file poly1305.c
+ *
+ * \brief Poly1305 authentication algorithm.
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/psa_crypto_driver_wrappers_no_static.c ---
+/*  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ripemd160.c ---
+/*
+ *  RIPE MD-160 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/rsa_alt_helpers.c ---
+/*
+ *  Helper functions for the RSA module
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ */
+
+--- library/rsa.c ---
+/*
+ *  The RSA public-key cryptosystem
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/sha1.c ---
+/*
+ *  FIPS-180-1 compliant SHA-1 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/sha256.c ---
+/*
+ *  FIPS-180-2 compliant SHA-256 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/sha3.c ---
+/*
+ *  FIPS-202 compliant SHA3 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/sha512.c ---
+/*
+ *  FIPS-180-2 compliant SHA-384/512 implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_cache.c ---
+/*
+ *  SSL session cache implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_ciphersuites.c ---
+/**
+ * \file ssl_ciphersuites.c
+ *
+ * \brief SSL ciphersuites for Mbed TLS
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_client.c ---
+/*
+ *  TLS 1.2 and 1.3 client-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_client.h ---
+/**
+ *  TLS 1.2 and 1.3 client-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_cookie.c ---
+/*
+ *  DTLS cookie callbacks implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_debug_helpers_generated.c ---
+/*
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ */
+
+--- library/ssl_msg.c ---
+/*
+ *  Generic SSL/TLS messaging layer functions
+ *  (record layer + retransmission state machine)
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_ticket.c ---
+/*
+ *  TLS server tickets callbacks implementation
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls.c ---
+/*
+ *  TLS shared functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls12_client.c ---
+/*
+ *  TLS client-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls12_server.c ---
+/*
+ *  TLS server-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls13_client.c ---
+/*
+ *  TLS 1.3 client-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls13_generic.c ---
+/*
+ *  TLS 1.3 functionality shared between client and server
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls13_keys.c ---
+/*
+ *  TLS 1.3 key schedule
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/ssl_tls13_server.c ---
+/*
+ *  TLS 1.3 server-side functions
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/threading.c ---
+/*
+ *  Threading abstraction layer
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/timing.c ---
+/*
+ *  Portable interface to the CPU cycle counter
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/version_features.c ---
+/*
+ *  Version feature information
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/version.c ---
+/*
+ *  Version information
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509_create.c ---
+/*
+ *  X.509 base functions for creating certificates / CSRs
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509_crl.c ---
+/*
+ *  X.509 Certificate Revocation List (CRL) parsing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509_crt.c ---
+/*
+ *  X.509 certificate parsing and verification
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509_csr.c ---
+/*
+ *  X.509 Certificate Signing Request (CSR) parsing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509.c ---
+/*
+ *  X.509 common functions for parsing and verification
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509write_crt.c ---
+/*
+ *  X.509 certificate writing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509write_csr.c ---
+/*
+ *  X.509 Certificate Signing Request writing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */
+
+--- library/x509write.c ---
+/*
+ *  X.509 internal, common functions for writing
+ *
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ */

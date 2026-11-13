@@ -1,0 +1,114 @@
+name: CI
+run-name: ${{ startsWith(github.ref, 'refs/tags/') && format('Build and release {0}', github.ref_name) || format('Tests {0}', github.ref_name) }}
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+permissions:
+  contents: read
+
+env:
+  RUSTUP_TOOLCHAIN: stable
+  CARGO_TARGET_DIR: ${{ github.workspace }}/target
+  CARGO_BUILD_JOBS: '2'
+  CARGO_PROFILE_DEV_DEBUG: '0'
+  CARGO_PROFILE_TEST_DEBUG: '0'
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  test:
+    name: Tests (x64/x86)
+    if: startsWith(github.ref, 'refs/heads/')
+    runs-on: windows-2022
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Rust targets
+        run: |
+          rustup toolchain install stable --profile minimal --component clippy --component rustfmt --target x86_64-pc-windows-msvc --target i686-pc-windows-msvc
+          if ($LASTEXITCODE -ne 0) { throw 'Rust toolchain setup failed.' }
+
+      - name: Check formatting
+        run: cargo fmt --check
+
+      # Cargo.lock is not tracked; resolve it before computing the cache key.
+      - name: Resolve dependency versions
+        run: cargo generate-lockfile
+
+      - name: Restore Rust and native source cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: windows-msvc
+          key: ${{ hashFiles('native/dependencies.json') }}
+          cache-directories: native/.deps
+
+      - name: Run Clippy
+        # Include build.rs output so native dependency setup is visible in CI.
+        run: cargo clippy --locked --verbose --verbose --all-targets --all-features -- -D warnings
+
+      - name: Test x64
+        run: ./test.ps1 -Architecture x64
+
+      - name: Test x86
+        run: ./test.ps1 -Architecture x86
+
+  build:
+    name: Build and release
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: windows-2022
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Rust targets
+        run: |
+          rustup toolchain install stable --profile minimal --target x86_64-pc-windows-msvc --target i686-pc-windows-msvc
+          if ($LASTEXITCODE -ne 0) { throw 'Rust toolchain setup failed.' }
+
+      - name: Resolve dependency versions
+        run: cargo generate-lockfile
+
+      - name: Restore Rust and native source cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: windows-msvc
+          key: ${{ hashFiles('native/dependencies.json') }}
+          cache-directories: native/.deps
+
+      - name: Build and collect DLLs
+        run: ./build-artifact.ps1
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: tvrockdtv
+          path: tvrockdtv/
+          if-no-files-found: error
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $archive = Join-Path $env:RUNNER_TEMP 'tvrockdtv.zip'
+          Compress-Archive -Path ./tvrockdtv -DestinationPath $archive -Force
+
+          gh release view "$env:RELEASE_TAG" --json id --jq .id
+          if ($LASTEXITCODE -eq 0) {
+              gh release upload "$env:RELEASE_TAG" "$archive" --clobber
+          } else {
+              gh release create "$env:RELEASE_TAG" "$archive" --verify-tag --title "$env:RELEASE_TAG" --generate-notes
+          }
+          if ($LASTEXITCODE -ne 0) { throw 'GitHub Release publication failed.' }
